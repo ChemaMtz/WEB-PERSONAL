@@ -1,0 +1,234 @@
+/* ============================================
+   ESTILOS PERSONALIZADOS PARA EL PORTAFOLIO
+   ============================================ */
+
+/* Variables de color personalizadas */
+:root {
+    --primary: #3b82f6;
+    --secondary: #8b5cf6;
+    --dark: #0f172a;
+    --darker: #020617;
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--dark);
+    color: #e2e8f0;
+    cursor: default;
+}
+
+/* ============================================
+   CURSOR PERSONALIZADO
+   ============================================ */
+
+* {
+    cursor: default;
+}
+
+a, button, input, textarea, select {
+    cursor: pointer !important;
+}
+
+/* Efecto de hover mejorado en enlaces */
+a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   BARRA DE DESPLAZAMIENTO
+   ============================================ */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* ============================================
+   TARJETAS CON EFECTO CRISTAL MEJORADO
+   ============================================ */
+
+.glass-card {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   ANIMACIONES DE REVELACIÓN AL SCROLL
+   ============================================ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   ANIMACIONES PERSONALIZADAS
+   ============================================ */
+
+/* Animación de fade in up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de blob flotante */
+@keyframes blob {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(20px, -50px) scale(1.1);
+    }
+    50% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+    75% {
+        transform: translate(50px, 50px) scale(1.05);
+    }
+}
+
+.animate-blob {
+    animation: blob 20s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* ============================================
+   EFECTOS DE ENFOQUE Y SELECCIÓN
+   ============================================ */
+
+::selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* ============================================
+   MEJORAS DE ACCESIBILIDAD
+   ============================================ */
+
+/* Focus visible para navegación por teclado */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   EFECTOS DE HOVER PREMIUM
+   ============================================ */
+
+/* Efecto de brillo en botones */
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Transición suave para imágenes */
+img {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   UTILIDADES PERSONALIZADAS
+   ============================================ */
+
+/* Gradiente de texto */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Sombra suave */
+.soft-shadow {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE MEJORAS
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Ajustes para móviles */
+    .glass-card {
+        backdrop-filter: blur(5px);
+    }
+    
+    body {
+        font-size: 16px; /* Mejor legibilidad en móviles */
+    }
+}
+
+/* ============================================
+   ANIMACIONES DE CARGA
+   ============================================ */
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ============================================
+   MEJORAS DE PERFORMANCE
+   ============================================ */
+
+/* Hardware acceleration para animaciones */
+.glass-card,
+.reveal,
+img {
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
