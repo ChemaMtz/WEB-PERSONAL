@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initCounters();
     initScrollProgress();
+    initCertFilters();
 });
+
 
 // ============================================
 // FUNCIONES DE INICIALIZACIÓN
@@ -230,5 +232,47 @@ function animateCounter(element) {
     }, 16);
 }
 
+// ============================================
+// FILTRO DE CERTIFICACIONES
+// ============================================
+
+function initCertFilters() {
+    const filterButtons = document.querySelectorAll('.cert-filter-btn');
+    const certCards = document.querySelectorAll('.cert-card-item');
+
+    if (!filterButtons.length || !certCards.length) return;
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Cambiar clase activa
+            filterButtons.forEach(b => b.classList.remove('active', 'bg-blue-600', 'text-white'));
+            filterButtons.forEach(b => b.classList.add('bg-slate-800', 'text-slate-300'));
+            
+            btn.classList.remove('bg-slate-800', 'text-slate-300');
+            btn.classList.add('active', 'bg-blue-600', 'text-white');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            certCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filterValue === 'all' || category.includes(filterValue)) {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 250);
+                }
+            });
+        });
+    });
+}
+
 // Log de confirmación
 console.log('✓ Portafolio cargado correctamente');
+

@@ -1,93 +1,39 @@
-# Mi Portafolio Personal
+# Portafolio Profesional — Jose Maria Martinez Espino
 
-Página web personal para mostrar proyectos y habilidades.
+Página web profesional y portafolio interactivo enfocado en el perfil híbrido de **Analista de Ciberseguridad & Desarrollador Full Stack**.
+
+## 🛡️ Perfil Profesional
+- **Puesto Actual:** Analista de Ciberseguridad en *Grupo POLESA*.
+- **Trayectoria Previa:** Desarrollador Full Stack en *Hulux*.
+- **Credenciales & Certificaciones:** +15 insignias verificadas en [Credly](https://www.credly.com/users/jose.m-mtz) (Cisco CCNA completo, Google Cybersecurity Professional, ISC2 Candidate, Ethical Hacker, Threat Management, Python Essentials).
 
 ## 📁 Estructura del Proyecto
 
 ```
 Web-PER/
-│
-├── index.html          # Página principal
-├── README.md           # Este archivo
-│
+├── index.html              # Página principal (SEO, Hero, Certificaciones, Experiencia, Habilidades, Proyectos)
+├── README.md               # Documentación del proyecto
 ├── css/
-│   └── styles.css      # Estilos principales
-│
+│   ├── custom.css          # Estilos personalizados, efectos glassmorphism, tarjetas de certificaciones
+│   └── styles.css          # Estilos complementarios
 ├── js/
-│   └── main.js         # JavaScript interactivo
-│
-├── img/                # Carpeta para imágenes
-│   └── (tus imágenes aquí)
-│
-└── assets/             # Recursos adicionales
-    └── (íconos, fuentes, etc.)
+│   ├── main.js             # Lógica interactiva, filtros de certificaciones, contadores y animaciones
+│   ├── tailwind-config.js  # Configuración del tema y colores
+│   └── firebase-config.js  # Conexión con Firebase para el formulario
+└── img/                    # Recursos gráficos, foto de perfil y previews de proyectos
 ```
 
-## 🚀 Cómo usar
-
-1. **Personaliza el contenido:**
-   - Abre `index.html` y reemplaza los textos entre corchetes `[...]` con tu información
-   - Añade tus propias imágenes en la carpeta `img/`
-   - Actualiza los enlaces de proyectos y redes sociales
-
-2. **Añade tus proyectos:**
-   - Duplica las tarjetas de proyecto existentes
-   - Actualiza las imágenes, títulos, descripciones y enlaces
-
-3. **Abre el sitio:**
-   - Simplemente abre `index.html` en tu navegador
-   - O usa un servidor local para desarrollo
-
-## 📝 Secciones incluidas
-
-- ✅ Navegación responsive
-- ✅ Sección Hero con presentación
-- ✅ Sobre Mí
-- ✅ Portafolio de Proyectos
-- ✅ Habilidades
-- ✅ Formulario de Contacto
-- ✅ Footer
-
-## 🎨 Personalización
-
-### Colores
-Puedes cambiar los colores editando las variables CSS en `css/styles.css`:
-
-```css
-:root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #3b82f6;
-    /* ... más colores */
-}
-```
-
-### Funcionalidades JavaScript
-- Menú hamburguesa responsive
-- Scroll suave
-- Animaciones al hacer scroll
-- Validación de formulario
-
-## 📱 Responsive
-
-El sitio está optimizado para verse bien en:
-- 📱 Móviles
-- 📱 Tablets
-- 💻 Desktop
-
-## 🔧 Mejoras sugeridas
-
-- [ ] Integrar servicio de envío de emails (EmailJS, Formspree)
-- [ ] Añadir más proyectos
-- [ ] Agregar certificaciones
-- [ ] Incluir blog o artículos
-- [ ] Implementar tema oscuro/claro
-- [ ] Añadir animaciones más avanzadas
-
-## 📄 Licencia
-
-Este proyecto es de uso personal. Siéntete libre de usarlo y modificarlo.
+## 🚀 Secciones Incluidas
+1. **Hero:** Presentación de propuesta de valor en ciberseguridad defensiva, redes y desarrollo seguro.
+2. **Estadísticas Dinámicas:** Contadores de certificaciones oficiales (+15), experiencia, proyectos y métricas de calidad.
+3. **Sobre Mí:** Narrativa técnica que une el conocimiento de infraestructura y seguridad con la capacidad de desarrollo full stack y scripting.
+4. **Certificaciones & Credenciales:** Grid interactivo con insignias oficiales (Google, Cisco, ISC2, Huawei) con filtros por categoría y enlace de verificación en vivo a Credly.
+5. **Experiencia Profesional:** Línea de tiempo detallando el rol en Grupo POLESA, experiencia en Hulux y desarrollo web freelance.
+6. **Habilidades Técnicas:** División estructurada en 3 dominios (Ciberseguridad/SOC, Redes CCNA, Desarrollo y Scripting con Python/JS).
+7. **Proyectos:** Showcase de sistemas empresariales (SGI-HULUX, Sistema de Reservas, SGI-UNIFORM) y proyectos de telecomunicaciones e IoT (Registro de ONUs, IOT-SS).
+8. **Contacto:** Formulario integrado y accesos directos a GitHub, LinkedIn, Credly, Twitter y Correo.
 
 ---
 
-Desarrollado con ❤️ por [Tu Nombre]
+Desarrollado por **Jose Maria Martinez Espino** &bull; [GitHub](https://github.com/ChemaMtz) | [Credly](https://www.credly.com/users/jose.m-mtz)
+
